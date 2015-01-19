@@ -11,5 +11,5 @@ ip link set dev ipipN up
 ```
 ifconfig gifN create
 ifconfig gifN tunnel <local external ip> <foreign external ip>
-ifconfig gif1 <local tunnel ip> <foreign tunnel ip>
+ifconfig gifN <local tunnel ip> <foreign tunnel ip>
 ```
