@@ -2,7 +2,7 @@
 
 ```
 sysctl -w net.ipv4.ip_forward=1
-ip tunnel add ipipN mode ipip remote <foreign external ip> local <local ip> dev <outward facing interface> ttl 64
+ip tunnel add ipipN mode ipip remote <foreign external ip> local <local ip> dev <outward facing interface> ttl 64 mtu 1280
 ip addr add <local tunnel ip> peer <foreign tunnel ip> dev ipipN
 ip link set dev ipipN up
 ```
