@@ -1,6 +1,7 @@
 # Fedora/CentOS 7/RHEL 7
 
 ```
+sysctl -w net.ipv4.conf.default.rp_filter=1
 sysctl -w net.ipv4.ip_forward=1
 ip tunnel add ipipN mode ipip remote <foreign external ip> local <local ip> dev <outward facing interface> ttl 64
 ip addr add <local tunnel ip> peer <foreign tunnel ip> dev ipipN
